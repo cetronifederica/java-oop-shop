@@ -1,8 +1,12 @@
 package jana60.shop;
 
+import java.text.DecimalFormat;
+
 public class Main {
 
 	public static void main(String[] args) {
+
+		DecimalFormat df = new DecimalFormat("#0.00€");
 
 		String marca = "Apple";
 		String nome = "Iphone";
@@ -14,7 +18,7 @@ public class Main {
 		System.out.println("Marca prodotto: " + prod.marca);
 		System.out.println("Nome prodotto: " + prod.nome);
 		System.out.println("Prezzo prodotto (iva escl) : " + prod.prezzo + "€");
-		System.out.println("Prezzo prodotto iva inclusa: " + prod.calcoloPrezzoConIva());
+		System.out.println("Prezzo prodotto iva inclusa: " + df.format(prod.calcoloPrezzoConIva()));
 
 	}
 

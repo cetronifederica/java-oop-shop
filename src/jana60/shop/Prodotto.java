@@ -22,7 +22,7 @@ public class Prodotto {
 	// metodi
 
 	float calcoloPrezzoConIva() {
-		float prezzoIva = (prezzo * 22) / 100;
+		float prezzoIva = (prezzo * 22) / 100 + prezzo;
 		return prezzoIva;
 	}
 
