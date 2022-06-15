@@ -1,5 +1,7 @@
 package jana60.shop;
 
+import java.text.DecimalFormat;
+
 public class Prodotto {
 
 	// attributi
@@ -20,10 +22,12 @@ public class Prodotto {
 	}
 
 	// metodi
+	DecimalFormat df = new DecimalFormat("#0.00€");
 
-	float calcoloPrezzoConIva() {
-		float prezzoIva = (prezzo * 22) / 100 + prezzo;
-		return prezzoIva;
+	String calcoloPrezzoConIva() {
+		float prezzoIva = (prezzo * iva) / 100 + prezzo;
+
+		return df.format(prezzoIva);
 	}
 
 }
